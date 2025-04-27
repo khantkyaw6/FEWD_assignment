@@ -1,0 +1,15 @@
+DESIGN
+========
+https://dribbble.com/shots/25385514-Cafe-Branding-and-Website
+
+RESETCSS
+========
+https://piccalil.li/blog/a-more-modern-css-reset/
+
+ICON
+====
+https://boxicons.com/
+
+CSS NAMING
+==========
+https://getbem.com/
