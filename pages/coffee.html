@@ -19,14 +19,30 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+		<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+		<script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+
 		<script>
 			function handleSearch() {
-			  const input = document.getElementById("searchInput").value;
-			  console.log("You searched for:", input);
+				const input = document
+					.getElementById("searchInput")
+					.value.toLowerCase();
+				const cards = document.querySelectorAll(
+					".section__special--card"
+				);
+
+				cards.forEach((card) => {
+					const title = card
+						.querySelector("h3")
+						.textContent.toLowerCase();
+					card.style.display = title.includes(input)
+						? "block"
+						: "none";
+				});
 			}
-		  </script>
+		</script>
 	</head>
-	
+	<body>
 		<div class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
 				<div class="header__nav--brand">CofFEE</div>
@@ -76,30 +92,37 @@
 				</div>
 			</div>
 		</section>
-		<section class="section__search">
-		</section>
-		<section class="section__special ">
+		<section class="section__search"></section>
+		<section class="section__special">
 			<div class="section__special--catelogue section__margin">
-				<h1>coffee catelogue</h1>
+				<h1>coffee catalogue</h1>
 				<div class="search-box">
-					<input type="text" id="searchInput" placeholder="Search...">
+					<input
+						type="text"
+						id="searchInput"
+						placeholder="Search..."
+					/>
 					<button onclick="handleSearch()">🔍</button>
-				  </div>
+				</div>
 			</div>
-			<div class="section__special__group ">
-				<div class="section__special__group--card">
-					<div class="section__special--card">
+		</section>
+		<section class="section__slider">
+			<div class="embla">
+				<div class="embla__container">
+					<!-- Card 1 -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
-								src="../assets/card/coffee_card_1.jpg"
-								alt="Iced Latte"
+								src="../assets/card/dessert_card_1.jpg"
+								alt="Vanilla Cake"
 							/>
 						</div>
 						<div class="section__special--card--content">
-							<h3>Iced Latte</h3>
+							<h3>Vanilla Cake</h3>
 							<p>
-								refreshing drink made by pouring chilled milk
-								over a shot (or two) of espresso
+								A classic, light, and fluffy cake with a
+								delicate vanilla flavor, often paired with
+								frosting or fresh fruit.
 							</p>
 							<div class="section__special--card--footer">
 								<strong>Rs. 59</strong>
@@ -107,30 +130,34 @@
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
+
+					<!-- Card 2 -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
-								src="../assets/card/coffee_card_2.jpg"
-								alt="Velvet Cold Brew"
+								src="../assets/card/dessert_card_2.jpg"
+								alt="Chocolate Cloud"
 							/>
 						</div>
 						<div class="section__special--card--content">
-							<h3>Velvet Cold Brew</h3>
+							<h3>Chocolate Cloud</h3>
 							<p>
-								A smooth and refreshing blend of bold cold brew
-								coffee swirled with creamy milk
+								A decadent slice of rich, moist chocolate cake,
+								topped with a velvety chocolate indulgence.
 							</p>
 							<div class="section__special--card--footer">
-								<strong>Rs. 70</strong>
+								<strong>Rs. 59</strong>
 								<button>Order Now</button>
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
+
+					<!-- Card 3 -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
 								src="../assets/card/coffee_card_3.jpg"
-								alt="Filter Coffee"
+								alt="Cold Brew Marble"
 							/>
 						</div>
 						<div class="section__special--card--content">
@@ -138,6 +165,7 @@
 							<p>
 								An artistic twist on your favorite cold
 								brew—this visually stunning drink combines bold
+								flavors with smooth texture.
 							</p>
 							<div class="section__special--card--footer">
 								<strong>Rs. 66</strong>
@@ -145,18 +173,21 @@
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
+
+					<!-- Card 4 -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
 								src="../assets/card/coffee_card_4.jpg"
-								alt="Filter Coffee"
+								alt="Iced Milky Rush"
 							/>
 						</div>
 						<div class="section__special--card--content">
 							<h3>Iced Milky Rush</h3>
 							<p>
-								refreshing, indulgent beverage that combines the
-								rich, creamy texture of milk with sweetness,
+								A refreshing, indulgent beverage that combines
+								the rich, creamy texture of milk with sweetness
+								and chill.
 							</p>
 							<div class="section__special--card--footer">
 								<strong>Rs. 48</strong>
@@ -164,18 +195,21 @@
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
+
+					<!-- Card 5 - Duplicate -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
-								src="../assets/card/coffee_card_1.jpg"
-								alt="Iced Latte"
+								src="../assets/card/dessert_card_1.jpg"
+								alt="Vanilla Cake"
 							/>
 						</div>
 						<div class="section__special--card--content">
-							<h3>Iced Latte</h3>
+							<h3>Vanilla Cake</h3>
 							<p>
-								refreshing drink made by pouring chilled milk
-								over a shot (or two) of espresso
+								A classic, light, and fluffy cake with a
+								delicate vanilla flavor, often paired with
+								frosting or fresh fruit.
 							</p>
 							<div class="section__special--card--footer">
 								<strong>Rs. 59</strong>
@@ -183,68 +217,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_2.jpg"
-								alt="Velvet Cold Brew"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Velvet Cold Brew</h3>
-							<p>
-								A smooth and refreshing blend of bold cold brew
-								coffee swirled with creamy milk
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 70</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_1.jpg"
-								alt="Iced Latte"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Iced Latte</h3>
-							<p>
-								refreshing drink made by pouring chilled milk
-								over a shot (or two) of espresso
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_2.jpg"
-								alt="Velvet Cold Brew"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Velvet Cold Brew</h3>
-							<p>
-								A smooth and refreshing blend of bold cold brew
-								coffee swirled with creamy milk
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 70</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
+
+					<!-- Card 6 - Duplicate -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
 								src="../assets/card/coffee_card_3.jpg"
-								alt="Filter Coffee"
+								alt="Cold Brew Marble"
 							/>
 						</div>
 						<div class="section__special--card--content">
@@ -252,6 +231,7 @@
 							<p>
 								An artistic twist on your favorite cold
 								brew—this visually stunning drink combines bold
+								flavors with smooth texture.
 							</p>
 							<div class="section__special--card--footer">
 								<strong>Rs. 66</strong>
@@ -259,21 +239,45 @@
 							</div>
 						</div>
 					</div>
-					<div class="section__special--card">
+
+					<!-- Card 7 - Duplicate -->
+					<div class="section__special--card embla__slide">
 						<div class="section__special--card--image">
 							<img
-								src="../assets/card/coffee_card_4.jpg"
-								alt="Filter Coffee"
+								src="../assets/card/coffee_card_3.jpg"
+								alt="Cold Brew Marble"
 							/>
 						</div>
 						<div class="section__special--card--content">
-							<h3>Iced Milky Rush</h3>
+							<h3>Cold Brew Marble</h3>
 							<p>
-								refreshing, indulgent beverage that combines the
-								rich, creamy texture of milk with sweetness,
+								An artistic twist on your favorite cold
+								brew—this visually stunning drink combines bold
+								flavors with smooth texture.
 							</p>
 							<div class="section__special--card--footer">
-								<strong>Rs. 48</strong>
+								<strong>Rs. 66</strong>
+								<button>Order Now</button>
+							</div>
+						</div>
+					</div>
+					<!-- Card 8 - Duplicate -->
+					<div class="section__special--card embla__slide">
+						<div class="section__special--card--image">
+							<img
+								src="../assets/card/coffee_card_3.jpg"
+								alt="Cold Brew Marble"
+							/>
+						</div>
+						<div class="section__special--card--content">
+							<h3>Cold Brew Marble</h3>
+							<p>
+								An artistic twist on your favorite cold
+								brew—this visually stunning drink combines bold
+								flavors with smooth texture.
+							</p>
+							<div class="section__special--card--footer">
+								<strong>Rs. 66</strong>
 								<button>Order Now</button>
 							</div>
 						</div>
@@ -281,7 +285,8 @@
 				</div>
 			</div>
 		</section>
-		<section class="section__footer">
+
+		<footer class="section__footer">
 			<h1>Coffee</h1>
 			<div class="section__footer--column">
 				<h2>privacy</h2>
@@ -316,7 +321,13 @@
 					<i class="fa-brands fa-linkedin"></i>
 				</div>
 			</div>
-		</section>
-	
+		</footer>
+
+		<script type="text/javascript">
+			const emblaNode = document.querySelector(".embla");
+			const options = { loop: false };
+			const plugins = [EmblaCarouselAutoplay()];
+			const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+		</script>
 	</body>
 </html>
