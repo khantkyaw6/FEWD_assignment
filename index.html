@@ -1,279 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CofFEE</title>
-		<link rel="stylesheet" href="./style.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
-
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-	</head>
-	<body>
-		<section class="section__hero">
-			<div class="header container section__nav--font">
-				<nav class="header__nav">
-					<div class="header__nav--brand">CofFEE</div>
-					<div class="header__nav--section">
-						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="./pages/coffee.html">COFFEE</a></li>
-							<li><a href="./pages/brew.html">HOW TO BREW</a></li>
-							<li><a href="./pages/cart.html">SHOP</a></li>
-							<li><a href="./pages/event.html">EVENTS</a></li>
-							<li>
-								<a href="./pages/subscription.html"
-									>SUBSCRIPTION</a
-								>
-							</li>
-						</ul>
-					</div>
-					<div class="header__nav--section">Search Section</div>
-				</nav>
-				<div class="hero_body">
-					<h3>Welcome!</h3>
-					<h1>
-						We serve the richest coffee <br />
-						in the city
-					</h1>
-					<button class="btn">Order Now</button>
-				</div>
-			</div>
-		</section>
-		<section class="section__icon">
-			<div class="section__icon-item">
-				<box-icon type="solid" size="lg" name="coffee"></box-icon>
-				<p>Hot Coffee</p>
-			</div>
-			<div class="section__icon-item">
-				<box-icon size="lg" name="coffee-togo"></box-icon>
-				<p>Cold Coffee</p>
-			</div>
-			<div class="section__icon-item">
-				<box-icon type="solid" size="lg" name="coffee-togo"></box-icon>
-				<p>Cup Coffee</p>
-			</div>
-			<div class="section__icon-item">
-				<box-icon size="lg" type="solid" name="cake"></box-icon>
-				<p>Dessert</p>
-			</div>
-		</section>
-		<section class="section__special">
-			<h1>our special coffee</h1>
-			<div class="section__special__group">
-				<div class="section__special__group--card">
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/coffee_card_1.jpg"
-								alt="Iced Latte"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Iced Latte</h3>
-							<p>
-								refreshing drink made by pouring chilled milk
-								over a shot (or two) of espresso
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/coffee_card_2.jpg"
-								alt="Velvet Cold Brew"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Velvet Cold Brew</h3>
-							<p>
-								A smooth and refreshing blend of bold cold brew
-								coffee swirled with creamy milk
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 70</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/coffee_card_3.jpg"
-								alt="Filter Coffee"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Cold Brew Marble</h3>
-							<p>
-								An artistic twist on your favorite cold
-								brew—this visually stunning drink combines bold
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 66</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/coffee_card_4.jpg"
-								alt="Filter Coffee"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Iced Milky Rush</h3>
-							<p>
-								refreshing, indulgent beverage that combines the
-								rich, creamy texture of milk with sweetness,
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 48</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<h1>our special dessert</h1>
-			<div class="section__special__group">
-				<div class="section__special__group--card">
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/dessert_card_1.jpg"
-								alt="Vanilla Cake"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Vanilla Cake</h3>
-							<p>
-								A classic, light, and fluffy cake with a
-								delicate vanilla flavor, often paired with
-								frosting or fresh fruit.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/dessert_card_2.jpg"
-								alt="Chocolate Cloud"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Chocolate Cloud</h3>
-							<p>
-								A decadent slice of rich, moist chocolate cake,
-								topped with a velvety chocolate indulgence.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/dessert_card_3.jpg"
-								alt="Choco Lava Cake"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Choco Lava Cake</h3>
-							<p>
-								A rich, warm chocolate cake with a gooey, molten
-								center, perfect for chocolate lovers
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-					<div class="section__special--card">
-						<div class="section__special--card--image">
-							<img
-								src="./assets/card/dessert_card_4.jpg"
-								alt="Sponge Cake"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Sponge Cake</h3>
-							<p>
-								A light and airy cake with a slightly spongy
-								texture, often used as the base for layered
-								cakes or desserts.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 59</strong>
-								<button>Order Now</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="section__footer">
-			<h1>Coffee</h1>
-			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
-			</div>
-			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
-			</div>
-			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
-			</div>
-			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
-			</div>
-			<div class="section__footer--column">
-				<h2>social media</h2>
-				<div class="section__footer--column-social-media">
-					<i class="fa-brands fa-twitter"></i>
-					<i class="fa-brands fa-facebook"></i>
-					<i class="fa-brands fa-instagram"></i>
-					<i class="fa-brands fa-linkedin"></i>
-				</div>
-			</div>
-		</footer>
-	</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -296,11 +20,16 @@
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	</head>
 	<body>
-		<header class="navbar">
-			<div class="container">
-				<div class="navbar__brand">CofFEE</div>
-				<nav class="navbar__nav">
-					<ul class="navbar__list">
+		<header class="header">
+			<nav class="header__nav section__nav--font header__nav--background">
+				<div class="header__nav--brand">CofFEE</div>
+
+				<!-- Hamburger Button -->
+				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
+
+				<!-- Nav Menu -->
+				<div class="header__nav--section" id="navMenu">
+					<ul>
 						<li><a href="#">HOME</a></li>
 						<li><a href="./pages/coffee.html">COFFEE</a></li>
 						<li><a href="./pages/brew.html">HOW TO BREW</a></li>
@@ -310,8 +39,8 @@
 							<a href="./pages/subscription.html">SUBSCRIPTION</a>
 						</li>
 					</ul>
-				</nav>
-			</div>
+				</div>
+			</nav>
 		</header>
 
 		<section class="hero">
@@ -323,5 +52,99 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="section__featured-coffee">
+			<h2>Featured Coffees</h2>
+			<div class="section__featured-coffee--container">
+				<div class="coffee-card">
+					<img
+						src="./assets/feature/feature_coffee_1.jpg"
+						alt="Espresso"
+					/>
+					<h3>Classic Espresso</h3>
+					<p>Rich, bold, and perfect for a quick energy boost.</p>
+					<button class="btn">Order Now</button>
+				</div>
+				<div class="coffee-card">
+					<img
+						src="./assets/feature/feature_coffee_2.jpg"
+						alt="Latte"
+					/>
+					<h3>Vanilla Latte</h3>
+					<p>Smooth and creamy with a hint of vanilla sweetness.</p>
+					<button class="btn">Order Now</button>
+				</div>
+				<div class="coffee-card">
+					<img
+						src="./assets/feature/feature_coffee_3.jpg"
+						alt="Cold Brew"
+					/>
+					<h3>Cold Brew</h3>
+					<p>
+						Chilled to perfection with deep flavor and low acidity.
+					</p>
+					<button class="btn">Order Now</button>
+				</div>
+			</div>
+		</section>
+
+		<footer class="section__footer">
+			<h1>CofFEE</h1>
+
+			<div class="section__footer--column">
+				<h2>Company</h2>
+				<h3><a href="#">About Us</a></h3>
+				<h3><a href="#">Careers</a></h3>
+				<h3><a href="#">Contact</a></h3>
+			</div>
+
+			<div class="section__footer--column">
+				<h2>Support</h2>
+				<h3><a href="#">FAQs</a></h3>
+				<h3><a href="#">Shipping & Returns</a></h3>
+				<h3><a href="#">Order Status</a></h3>
+			</div>
+
+			<div class="section__footer--column">
+				<h2>Legal</h2>
+				<h3><a href="#">Terms of Use</a></h3>
+				<h3><a href="#">Privacy Policy</a></h3>
+				<h3><a href="#">Cookie Policy</a></h3>
+			</div>
+
+			<div class="section__footer--column">
+				<h2>Discover</h2>
+				<h3><a href="#">Our Coffee</a></h3>
+				<h3><a href="#">How to Brew</a></h3>
+				<h3><a href="#">Events & Workshops</a></h3>
+			</div>
+
+			<div class="section__footer--column">
+				<h2>Follow Us</h2>
+				<div class="section__footer--column-social-media">
+					<a href="https://twitter.com" target="_blank"
+						><i class="fa-brands fa-twitter"></i
+					></a>
+					<a href="https://facebook.com" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+					<a href="https://instagram.com" target="_blank"
+						><i class="fa-brands fa-instagram"></i
+					></a>
+					<a href="https://linkedin.com" target="_blank"
+						><i class="fa-brands fa-linkedin"></i
+					></a>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const hamburgerBtn = document.getElementById("hamburgerBtn");
+			const navMenu = document.getElementById("navMenu");
+
+			hamburgerBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("show-menu");
+			});
+		</script>
 	</body>
 </html>

@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="../style.css" />
+		<!-- <link rel="stylesheet" href="../styles/coffee_style.css" /> -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -43,24 +44,28 @@
 		</script>
 	</head>
 	<body>
-		<div class="header">
+		<header class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
 				<div class="header__nav--brand">CofFEE</div>
-				<div class="header__nav--section">
+
+				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
+
+				<div class="header__nav--section" id="navMenu">
 					<ul>
 						<li><a href="../index.html">HOME</a></li>
 						<li><a href="#">COFFEE</a></li>
-						<li><a href="./brew.html">HOW TO BREW</a></li>
-						<li><a href="./cart.html">SHOP</a></li>
-						<li><a href="./event.html">EVENTS</a></li>
+						<li><a href="../pages/brew.html">HOW TO BREW</a></li>
+						<li><a href="../pages/cart.html">SHOP</a></li>
+						<li><a href="../pages/event.html">EVENTS</a></li>
 						<li>
-							<a href="./subscription.html">SUBSCRIPTION</a>
+							<a href="../pages/subscription.html"
+								>SUBSCRIPTION</a
+							>
 						</li>
 					</ul>
 				</div>
-				<div class="header__nav--section">Search Section</div>
 			</nav>
-		</div>
+		</header>
 		<section class="section__coffee">
 			<h1>Try Coffee Everyday!</h1>
 			<div class="section__coffee--content">
@@ -75,14 +80,14 @@
 					allowfullscreen
 				></iframe>
 				<div class="section__coffee--image">
-					<div class="section__coffee--card">
+					<div>
 						<img
 							src="../assets/coffee_page_1.jpg"
 							alt="Coffee cup 1"
 						/>
 						<p>Flavoured Creamy Coffee</p>
 					</div>
-					<div class="section__coffee--card">
+					<div>
 						<img
 							src="../assets/coffee_page_2.jpg"
 							alt="Coffee cup 2"
@@ -92,7 +97,6 @@
 				</div>
 			</div>
 		</section>
-		<section class="section__search"></section>
 		<section class="section__special">
 			<div class="section__special--catelogue section__margin">
 				<h1>coffee catalogue</h1>
@@ -287,38 +291,51 @@
 		</section>
 
 		<footer class="section__footer">
-			<h1>Coffee</h1>
+			<h1>CofFEE</h1>
+
 			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
+				<h2>Company</h2>
+				<h3><a href="#">About Us</a></h3>
+				<h3><a href="#">Careers</a></h3>
+				<h3><a href="#">Contact</a></h3>
 			</div>
+
 			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
+				<h2>Support</h2>
+				<h3><a href="#">FAQs</a></h3>
+				<h3><a href="#">Shipping & Returns</a></h3>
+				<h3><a href="#">Order Status</a></h3>
 			</div>
+
 			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
+				<h2>Legal</h2>
+				<h3><a href="#">Terms of Use</a></h3>
+				<h3><a href="#">Privacy Policy</a></h3>
+				<h3><a href="#">Cookie Policy</a></h3>
 			</div>
+
 			<div class="section__footer--column">
-				<h2>privacy</h2>
-				<h3>terms of use</h3>
-				<h3>privacy policy</h3>
-				<h3>cookies</h3>
+				<h2>Discover</h2>
+				<h3><a href="#">Our Coffee</a></h3>
+				<h3><a href="#">How to Brew</a></h3>
+				<h3><a href="#">Events & Workshops</a></h3>
 			</div>
+
 			<div class="section__footer--column">
-				<h2>social media</h2>
+				<h2>Follow Us</h2>
 				<div class="section__footer--column-social-media">
-					<i class="fa-brands fa-twitter"></i>
-					<i class="fa-brands fa-facebook"></i>
-					<i class="fa-brands fa-instagram"></i>
-					<i class="fa-brands fa-linkedin"></i>
+					<a href="https://twitter.com" target="_blank"
+						><i class="fa-brands fa-twitter"></i
+					></a>
+					<a href="https://facebook.com" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+					<a href="https://instagram.com" target="_blank"
+						><i class="fa-brands fa-instagram"></i
+					></a>
+					<a href="https://linkedin.com" target="_blank"
+						><i class="fa-brands fa-linkedin"></i
+					></a>
 				</div>
 			</div>
 		</footer>

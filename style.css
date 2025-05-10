@@ -59,6 +59,12 @@ body {
 	transform: scale(1.1);
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -157,20 +163,23 @@ a {
 	scroll-margin-block: 5ex;
 }
 
-.section__hero {
-	background-image: url("./assets/coffee_hero_section.jpg");
-	background-repeat: no-repeat;
-	background-position: 50% 90%;
-	background-size: cover;
-	height: 100vh;
-}
-
 .header__nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2rem;
 	color: var(--color-secondary);
+	position: relative;
+}
+
+.header__nav--brand {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--color-secondary);
+}
+
+.header__nav--background {
+	background-color: var(--color-primary);
 }
 
 .header__nav--section ul {
@@ -184,23 +193,7 @@ a {
 .header__nav--section a {
 	text-decoration: none;
 	font-weight: 500;
-
 	cursor: pointer;
-}
-
-.hero_body {
-	text-align: start;
-	margin-top: 20rem;
-	color: var(--color-secondary);
-}
-
-.hero_body h3,
-h1 {
-	margin: 15px 0;
-}
-
-.hero_body h1 {
-	font-size: 30px;
 }
 
 .section__icon {
@@ -227,13 +220,6 @@ h1 {
 	color: var(--color-icon);
 }
 
-.section__special {
-	background-color: var(--color-secondary);
-	color: var(--color-primary);
-	display: flex;
-	flex-direction: column;
-}
-
 .section__special__group {
 	padding: 2rem;
 }
@@ -245,149 +231,10 @@ h1 {
 	justify-content: center;
 }
 
-.section__special h1 {
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.section__special--card {
-	width: 250px;
-	background-color: var(--color-secondary);
-	border-radius: 1rem;
-	overflow: hidden;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.section__special--card--image {
-	position: relative;
-}
-
-.section__special--card--image img {
-	height: 300px;
-	width: 100%;
-}
-
 .card__image img {
 	height: 320px;
 	object-fit: cover;
 	display: block;
-}
-
-.section__special--card--content {
-	padding: 1rem;
-}
-
-.section__special--card--content h3 {
-	margin: 0 0 0.5rem;
-	font-size: 1.2rem;
-	color: #333;
-}
-
-.section__special--card--content p {
-	font-size: 0.9rem;
-	color: #666;
-	margin-bottom: 1rem;
-}
-
-.section__special--card--footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.section__special--card--footer button {
-	background-color: #4b2e2e;
-	color: #fff;
-	padding: 0.5rem 1rem;
-	border: none;
-	border-radius: 0.5rem;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.section__footer {
-	height: 30vh;
-	background-color: var(--color-primary);
-	padding: 3rem;
-	color: var(--color-secondary);
-	display: flex;
-	justify-content: space-between;
-	gap: 2rem;
-}
-
-.section__footer h1 {
-	text-align: center;
-	margin: 0;
-}
-
-.section__footer--column {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.section__footer--column h2 {
-	text-transform: uppercase;
-	font-size: var(--font-xl);
-}
-
-.section__footer--column h3 {
-	text-transform: capitalize;
-	font-size: var(--font-sm);
-	font-weight: 200;
-}
-
-.section__footer--column-social-media {
-	display: flex;
-	justify-content: space-around;
-}
-
-.section__coffee {
-	padding: 2rem;
-	background-color: var(--color-accent);
-	height: 120vh;
-}
-
-.section__nav--font {
-	color: var(--color-secondary);
-}
-
-.section__nav--font ul li a {
-	color: var(--color-secondary);
-}
-
-.section__coffee h2 {
-	font-size: 2rem;
-	font-weight: 800;
-	color: var(--color-title);
-	padding: 2rem;
-	text-align: center;
-}
-
-.section__coffee--content {
-	display: flex;
-	justify-content: space-around;
-	height: 90vh;
-}
-
-.section__coffee--image {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.section__coffee--image img {
-	width: 20rem;
-	height: 18rem;
-	object-fit: cover;
-	border-radius: 8px;
-	margin: 1rem 0;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: transform 0.3s ease;
-}
-
-.section__coffee--image img:hover {
-	transform: scale(1.05);
 }
 
 .header__nav--background {
@@ -397,46 +244,12 @@ h1 {
 .section__special--catelogue {
 	display: flex;
 	justify-content: space-around;
+	overflow: hidden;
 }
 
 .section__margin {
 	margin: 2rem 0;
 }
-
-/* search input with button  */
-.search-box {
-	display: flex;
-	align-items: center;
-	width: 250px;
-	background-color: var(--color-tertiary);
-	border: 2px solid #ccc;
-	border-radius: 30px;
-	padding: 5px 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.search-box input {
-	border: none;
-	outline: none;
-	flex: 1;
-	padding: 8px;
-	font-size: 16px;
-	border-radius: 30px;
-}
-
-.search-box button {
-	background: none;
-	border: none;
-	font-size: 18px;
-	cursor: pointer;
-	padding: 5px 10px;
-}
-
-.search-box button:hover {
-	color: #007bff;
-}
-
-/* search input with button  */
 
 /* brew section css file  */
 
@@ -749,49 +562,15 @@ h1 {
 
 /* cart section css file  */
 
-/* for slider embla section  */
+/* Section Home  */
 
-.embla {
-	overflow: hidden;
-}
-.embla__container {
-	display: flex;
-	gap: 3rem;
-}
-.embla__slide {
-	flex: 0 0 20%;
-	/* margin: 0 1rem;
-	min-width: 0; */
-}
-
-/* for slider embla section  */
-
-.section__slider {
-	margin: 2rem;
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 320px) {
-	.section__footer {
-		width: 320px;
-		overflow: hidden;
-	}
-}
-
-/* testing start  */
-/* Reset & Base Styles */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	font-family: "Segoe UI", sans-serif;
-	color: #fff;
-	background-color: #111;
+.hamburger {
+	display: none;
+	font-size: 2rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--color-secondary);
 }
 
 /* Navbar */
@@ -837,27 +616,28 @@ body {
 
 /* Hero Section */
 .hero {
-	height: 100vh;
-	background: url("./assets/hero_bg.jpg") no-repeat center center/cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	position: relative;
+	width: 100%;
+	height: 90vh;
+	overflow: hidden;
 }
 
 .hero__overlay {
-	background: rgba(0, 0, 0, 0.6);
+	background-image: url("./assets/banner/coffee_banner_1.jpg"); /* update the path */
+	background-size: cover;
+	background-position: center;
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	padding: 0 1rem;
+	justify-content: center;
 }
 
 .hero__content {
+	color: #fff;
 	text-align: center;
-	max-width: 700px;
+	padding: 2rem;
+	border-radius: 0.5rem;
 }
 
 .hero__content h3 {
@@ -870,6 +650,101 @@ body {
 	line-height: 1.2;
 	margin-bottom: 1rem;
 }
+
+.section__featured-coffee {
+	padding: 4rem 2rem;
+	background-color: #f9f6f2;
+	text-align: center;
+}
+
+.section__featured-coffee h2 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: #3e2723;
+}
+
+.section__featured-coffee--container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.coffee-card {
+	background-color: #fff;
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.coffee-card:hover {
+	transform: translateY(-5px);
+}
+
+.coffee-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 1rem;
+}
+
+.coffee-card h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: #4e342e;
+}
+
+.coffee-card p {
+	font-size: 1rem;
+	color: #6d4c41;
+	margin-bottom: 1rem;
+}
+
+.coffee-card .btn {
+	background-color: #6f4e37;
+	color: white;
+	border: none;
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.coffee-card .btn:hover {
+	background-color: #5d3b28;
+}
+
+/* Social Media Icons Hover Effects */
+.section__footer--column-social-media a {
+	color: #999; /* Default color (gray) */
+	transition: color 0.3s ease;
+}
+
+.section__footer--column-social-media a:hover {
+	color: inherit;
+}
+
+.section__footer--column-social-media a:hover .fa-twitter {
+	color: #1da1f2; /* Twitter Blue */
+}
+
+.section__footer--column-social-media a:hover .fa-facebook {
+	color: #1877f2; /* Facebook Blue */
+}
+
+.section__footer--column-social-media a:hover .fa-instagram {
+	color: #fd1d1d; /* Instagram Pink */
+}
+
+.section__footer--column-social-media a:hover .fa-linkedin {
+	color: #0077b5; /* LinkedIn Blue */
+}
+
+/* Section Home  */
 
 .btn {
 	background-color: #c29d6e;
@@ -908,3 +783,401 @@ body {
 }
 
 /* testing end  */
+/* ------------------- */
+/* Mobile styles */
+/* ------------------- */
+@media (min-width: 320px) and (max-width: 767px) {
+	.hamburger {
+		display: block;
+		position: absolute;
+		top: 1.2rem;
+		right: 2rem;
+		z-index: 1001;
+		font-size: 2rem;
+		background: none;
+		border: none;
+		color: var(--color-secondary);
+		cursor: pointer;
+	}
+
+	.header__nav--section {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		background-color: var(--color-primary);
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 1rem 2rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+	}
+
+	.header__nav--section ul {
+		flex-direction: column;
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.header__nav--section li {
+		margin: 1rem 0;
+		text-align: right;
+	}
+
+	.header__nav--section a {
+		text-decoration: none;
+		font-weight: 500;
+		color: var(--color-secondary);
+		cursor: pointer;
+	}
+
+	/* Show when toggled */
+	.header__nav--section.show-menu {
+		display: flex;
+	}
+}
+
+/* ------------------- */
+/* Desktop styles */
+/* ------------------- */
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+
+	.header__nav--section {
+		display: flex !important;
+		position: static;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.header__nav--section ul {
+		list-style: none;
+		display: flex;
+		gap: 1.5rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header__nav--section li {
+		margin: 0;
+	}
+
+	.header__nav--section a {
+		text-decoration: none;
+		font-weight: 500;
+		color: var(--color-secondary);
+		cursor: pointer;
+	}
+
+	/* coffee section  */
+}
+
+/* Section Footer  Start */
+/* ------------- Footer Styles ------------- */
+
+.section__footer {
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
+	padding: 3rem 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	row-gap: 2rem;
+}
+
+.section__footer h1 {
+	font-size: 2rem;
+	flex: 1 1 100%;
+	margin-bottom: 1rem;
+}
+
+.section__footer--column {
+	flex: 1 1 150px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.section__footer--column h2 {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.section__footer--column h3 {
+	font-size: 1rem;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.section__footer--column h3:hover {
+	color: var(--color-accent, #ffb347); /* fallback accent color */
+}
+
+.section__footer--column-social-media {
+	display: flex;
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+.section__footer--column-social-media i {
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.section__footer--column-social-media i:hover {
+	color: var(--color-accent, #ffb347);
+}
+
+/* -------- Responsive Footer -------- */
+
+@media (max-width: 768px) {
+	.section__footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.section__footer h1 {
+		text-align: left;
+	}
+
+	.section__footer--column {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+/* Section Footer  End */
+
+/* --------------- Home Page Responsive ------------------- */
+
+/* Coffee page Section CSS Start */
+.section__coffee {
+	padding: 2rem;
+	background-color: var(--color-accent);
+	height: 120vh;
+}
+
+.section__nav--font {
+	color: var(--color-secondary);
+}
+
+.section__nav--font ul li a {
+	color: var(--color-secondary);
+}
+
+.section__coffee h2 {
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--color-title);
+	padding: 2rem;
+	text-align: center;
+}
+
+.section__coffee--content {
+	display: flex;
+	justify-content: space-around;
+	height: 90vh;
+}
+
+.section__coffee--image {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.section__coffee--image img {
+	width: 20rem;
+	height: 18rem;
+	object-fit: cover;
+	border-radius: 8px;
+	margin: 1rem 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.section__coffee--image img:hover {
+	transform: scale(1.05);
+}
+
+.section__special {
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+}
+
+.section__special h1 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* search input with button  */
+.search-box {
+	display: flex;
+	align-items: center;
+	width: 250px;
+	background-color: var(--color-tertiary);
+	border: 2px solid #ccc;
+	border-radius: 30px;
+	padding: 5px 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+	border: none;
+	outline: none;
+	flex: 1;
+	padding: 8px;
+	font-size: 16px;
+	border-radius: 30px;
+}
+
+.search-box button {
+	background: none;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.search-box button:hover {
+	color: #007bff;
+}
+
+/* search input with button  */
+
+.section__slider {
+	margin: 2rem;
+}
+
+.embla {
+	overflow: hidden;
+}
+.embla__container {
+	display: flex;
+	gap: 3rem;
+}
+.embla__slide {
+	flex: 0 0 20%;
+	/* margin: 0 1rem;
+	min-width: 0; */
+}
+
+.section__special--card {
+	width: 250px;
+	background-color: var(--color-secondary);
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section__special--card--image {
+	position: relative;
+}
+
+.section__special--card--image img {
+	height: 300px;
+	width: 100%;
+}
+
+.section__special--card--content {
+	padding: 1rem;
+}
+
+.section__special--card--content h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+	color: #333;
+}
+
+.section__special--card--content p {
+	font-size: 0.9rem;
+	color: #666;
+	margin-bottom: 1rem;
+}
+
+.section__special--card--footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section__special--card--footer button {
+	background-color: #4b2e2e;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	.section__coffee {
+		padding: 1rem;
+		height: auto;
+	}
+
+	.section__coffee h1 {
+		font-size: 1.5rem;
+		padding: 1rem 0;
+	}
+
+	.section__coffee--content {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.section__coffee--content iframe {
+		width: 100%;
+		height: 200px;
+	}
+
+	.section__coffee--image {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.section__coffee--image img {
+		width: 90%;
+		height: auto;
+	}
+
+	.section__slider {
+		margin: 1rem;
+	}
+
+	.embla__container {
+		gap: 1rem;
+	}
+
+	.embla__slide {
+		flex: 0 0 80%;
+	}
+
+	.search-box {
+		width: 100%;
+		margin: 1rem auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.section__coffee--content iframe {
+		width: 55%;
+		height: 100%;
+	}
+
+	.section__coffee--image {
+		width: 30%;
+	}
+}
+
+/* Coffee page Section CSS End  */
