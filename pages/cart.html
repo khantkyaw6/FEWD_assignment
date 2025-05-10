@@ -25,10 +25,8 @@
 			<nav class="header__nav section__nav--font header__nav--background">
 				<div class="header__nav--brand">CofFEE</div>
 
-				<!-- Hamburger Button -->
 				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
 
-				<!-- Nav Menu -->
 				<div class="header__nav--section" id="navMenu">
 					<ul>
 						<li><a href="../index.html">HOME</a></li>
@@ -148,5 +146,54 @@
 				</div>
 			</div>
 		</footer>
+
+		<script>
+			function updateTotal() {
+				let total = 0;
+				document.querySelectorAll(".cart__item").forEach((item) => {
+					const price = parseFloat(
+						item.querySelector("p").textContent.replace("$", "")
+					);
+					const quantity = parseInt(
+						item.querySelector(".cart__item--controls span")
+							.textContent
+					);
+					total += price * quantity;
+				});
+
+				// Update the displayed total
+				document.querySelector(
+					".cart__total h3"
+				).textContent = `Total: $${total.toFixed(2)}`;
+			}
+
+			document
+				.querySelectorAll(".cart__item--controls button")
+				.forEach((button) => {
+					button.addEventListener("click", function () {
+						const isIncrement = this.textContent === "+";
+						const span = this.parentElement.querySelector("span");
+						let count = parseInt(span.textContent);
+						count = isIncrement
+							? count + 1
+							: Math.max(count - 1, 1);
+						span.textContent = count;
+
+						updateTotal(); // 🔁 Recalculate total after quantity change
+					});
+				});
+
+			document
+				.querySelectorAll(".cart__item--remove")
+				.forEach((removeBtn) => {
+					removeBtn.addEventListener("click", function () {
+						this.closest(".cart__item").remove();
+						updateTotal(); // 🔁 Recalculate total after removal
+					});
+				});
+
+			// Call once on page load to set initial total
+			updateTotal();
+		</script>
 	</body>
 </html>
