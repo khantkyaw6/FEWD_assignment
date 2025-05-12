@@ -209,7 +209,8 @@ a {
 }
 
 .header__nav--section ul li a:hover,
-.header__nav--section ul li a:active {
+.header__nav--section ul li a:active,
+.header__nav--section ul li a.active {
 	border-bottom: 3px solid white;
 }
 
