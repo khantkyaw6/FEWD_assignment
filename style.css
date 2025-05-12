@@ -203,6 +203,16 @@ a {
 	cursor: pointer;
 }
 
+.header__nav--section ul li a {
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.header__nav--section ul li a:hover,
+.header__nav--section ul li a:active {
+	border-bottom: 3px solid white;
+}
+
 .section__icon {
 	display: flex;
 	justify-content: center;
