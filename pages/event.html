@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="../style.css" />
+		<link rel="icon" href="../assets/coffee_logo.jpg" type="image/jpeg" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,17 +17,16 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	</head>
 	<body>
 		<header class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
-				<div class="header__nav--brand">CofFEE</div>
-
+				<div class="header__nav--brand">
+					<img src="../assets/coffee_logo.jpg" alt="Cofffee Logo" />
+				</div>
 				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
-
 				<div class="header__nav--section" id="navMenu">
 					<ul>
 						<li><a href="../index.html">HOME</a></li>
@@ -43,6 +43,7 @@
 				</div>
 			</nav>
 		</header>
+
 		<div class="section__event">
 			<h2>Upcoming Coffee Events</h2>
 			<div class="event__grid">
@@ -108,36 +109,30 @@
 		</div>
 
 		<footer class="section__footer">
-			<h1>CofFEE</h1>
-
 			<div class="section__footer--column">
 				<h2>Company</h2>
 				<h3><a href="#">About Us</a></h3>
 				<h3><a href="#">Careers</a></h3>
 				<h3><a href="#">Contact</a></h3>
 			</div>
-
 			<div class="section__footer--column">
 				<h2>Support</h2>
 				<h3><a href="#">FAQs</a></h3>
 				<h3><a href="#">Shipping & Returns</a></h3>
 				<h3><a href="#">Order Status</a></h3>
 			</div>
-
 			<div class="section__footer--column">
 				<h2>Legal</h2>
 				<h3><a href="#">Terms of Use</a></h3>
 				<h3><a href="#">Privacy Policy</a></h3>
 				<h3><a href="#">Cookie Policy</a></h3>
 			</div>
-
 			<div class="section__footer--column">
 				<h2>Discover</h2>
 				<h3><a href="#">Our Coffee</a></h3>
 				<h3><a href="#">How to Brew</a></h3>
 				<h3><a href="#">Events & Workshops</a></h3>
 			</div>
-
 			<div class="section__footer--column">
 				<h2>Follow Us</h2>
 				<div class="section__footer--column-social-media">
@@ -156,5 +151,13 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+			const hamburgerBtn = document.getElementById("hamburgerBtn");
+			const navMenu = document.getElementById("navMenu");
+
+			hamburgerBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("show-menu");
+			});
+		</script>
 	</body>
 </html>

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="../style.css" />
-		<!-- <link rel="stylesheet" href="../styles/sub_style.css" /> -->
+		<link rel="icon" href="../assets/coffee_logo.jpg" type="image/jpeg" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -23,72 +23,153 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="header__nav section__nav--font header__nav--background">
-				<div class="header__nav--brand">CofFEE</div>
+			<nav
+				class="header__nav section__nav--font header__nav--background"
+				role="navigation"
+				aria-label="Main navigation"
+			>
+				<div class="header__nav--brand">
+					<img src="../assets/coffee_logo.jpg" alt="Cofffee Logo" />
+				</div>
 
-				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
+				<button
+					class="hamburger"
+					id="hamburgerBtn"
+					aria-label="Toggle navigation"
+				>
+					&#9776;
+				</button>
 
-				<div class="header__nav--section" id="navMenu">
+				<div
+					class="header__nav--section"
+					id="navMenu"
+					aria-label="Navigation menu"
+				>
 					<ul>
-						<li><a href="../index.html">HOME</a></li>
-						<li><a href="../pages/coffee.html">COFFEE</a></li>
-						<li><a href="../pages/brew.html">HOW TO BREW</a></li>
-						<li><a href="../pages/cart.html">SHOP</a></li>
-						<li><a href="../pages/event.html">EVENTS</a></li>
 						<li>
-							<a href="#">SUBSCRIPTION</a>
+							<a href="../index.html" aria-label="Go to Home page"
+								>HOME</a
+							>
+						</li>
+						<li>
+							<a
+								href="../pages/coffee.html"
+								aria-label="Go to Coffee page"
+								>COFFEE</a
+							>
+						</li>
+						<li>
+							<a
+								href="../pages/brew.html"
+								aria-label="Go to How to Brew page"
+								>HOW TO BREW</a
+							>
+						</li>
+						<li>
+							<a
+								href="../pages/cart.html"
+								aria-label="Go to Shop page"
+								>SHOP</a
+							>
+						</li>
+						<li>
+							<a
+								href="../pages/event.html"
+								aria-label="Go to Events page"
+								>EVENTS</a
+							>
+						</li>
+						<li>
+							<a href="#" aria-label="Go to Subscription page"
+								>SUBSCRIPTION</a
+							>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
-		<div class="section__subscription">
-			<h2>Choose Your Subscription Plan</h2>
-			<p>
-				Enjoy premium coffee delivered monthly. Flexible plans, cancel
-				anytime.
-			</p>
+		<main>
+			<section
+				class="section__subscription"
+				aria-labelledby="subscription-heading"
+			>
+				<h2 id="subscription-heading">Choose Your Subscription Plan</h2>
+				<p>
+					Enjoy premium coffee delivered monthly. Flexible plans,
+					cancel anytime.
+				</p>
 
-			<div class="subscription__plans">
-				<!-- Silver Subscription -->
-				<div class="subscription__card">
-					<h3>Silver Subscription</h3>
-					<p class="price">$14.99 / month</p>
-					<ul>
-						<li>1 bag (250g) premium coffee</li>
-						<li>Free delivery</li>
-						<li>Cancel anytime</li>
-					</ul>
-					<button class="subscribe__btn">Subscribe</button>
-				</div>
+				<div
+					class="subscription__plans"
+					role="region"
+					aria-labelledby="subscription-plans"
+				>
+					<!-- Silver Subscription -->
+					<div
+						class="subscription__card"
+						aria-labelledby="silver-subscription"
+					>
+						<h3 id="silver-subscription">Silver Subscription</h3>
+						<p class="price">$14.99 / month</p>
+						<ul>
+							<li>1 bag (250g) premium coffee</li>
+							<li>Free delivery</li>
+							<li>Cancel anytime</li>
+						</ul>
+						<button
+							class="subscribe__btn"
+							aria-label="Subscribe to Silver Plan"
+						>
+							Subscribe
+						</button>
+					</div>
 
-				<!-- Platinum Subscription (Featured in middle) -->
-				<div class="subscription__card featured">
-					<h3>Platinum Subscription</h3>
-					<p class="price">$29.99 / month</p>
-					<ul>
-						<li>3 bags (750g) premium coffee</li>
-						<li>Exclusive beans</li>
-						<li>Free brewing kit</li>
-						<li>Priority delivery</li>
-						<li>Cancel anytime</li>
-					</ul>
-					<button class="subscribe__btn">Subscribe</button>
-				</div>
+					<!-- Platinum Subscription (Featured in middle) -->
+					<div
+						class="subscription__card featured"
+						aria-labelledby="platinum-subscription"
+					>
+						<h3 id="platinum-subscription">
+							Platinum Subscription
+						</h3>
+						<p class="price">$29.99 / month</p>
+						<ul>
+							<li>3 bags (750g) premium coffee</li>
+							<li>Exclusive beans</li>
+							<li>Free brewing kit</li>
+							<li>Priority delivery</li>
+							<li>Cancel anytime</li>
+						</ul>
+						<button
+							class="subscribe__btn"
+							aria-label="Subscribe to Platinum Plan"
+						>
+							Subscribe
+						</button>
+					</div>
 
-				<!-- Gold Subscription -->
-				<div class="subscription__card">
-					<h3>Gold Subscription</h3>
-					<p class="price">$19.99 / month</p>
-					<ul>
-						<li>2 bags (500g) premium coffee</li>
-						<li>Free delivery</li>
-						<li>Cancel anytime</li>
-					</ul>
-					<button class="subscribe__btn">Subscribe</button>
+					<!-- Gold Subscription -->
+					<div
+						class="subscription__card"
+						aria-labelledby="gold-subscription"
+					>
+						<h3 id="gold-subscription">Gold Subscription</h3>
+						<p class="price">$19.99 / month</p>
+						<ul>
+							<li>2 bags (500g) premium coffee</li>
+							<li>Free delivery</li>
+							<li>Cancel anytime</li>
+						</ul>
+						<button
+							class="subscribe__btn"
+							aria-label="Subscribe to Gold Plan"
+						>
+							Subscribe
+						</button>
+					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 
 		<footer class="section__footer">
 			<h1>CofFEE</h1>
@@ -122,22 +203,45 @@
 			</div>
 
 			<div class="section__footer--column">
-				<h2>Follow Us</h2>
 				<div class="section__footer--column-social-media">
-					<a href="https://twitter.com" target="_blank"
-						><i class="fa-brands fa-twitter"></i
-					></a>
-					<a href="https://facebook.com" target="_blank"
-						><i class="fa-brands fa-facebook"></i
-					></a>
-					<a href="https://instagram.com" target="_blank"
-						><i class="fa-brands fa-instagram"></i
-					></a>
-					<a href="https://linkedin.com" target="_blank"
-						><i class="fa-brands fa-linkedin"></i
-					></a>
+					<a
+						href="https://twitter.com"
+						target="_blank"
+						aria-label="Visit our Twitter"
+					>
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						aria-label="Visit our Facebook"
+					>
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						aria-label="Visit our Instagram"
+					>
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a
+						href="https://linkedin.com"
+						target="_blank"
+						aria-label="Visit our LinkedIn"
+					>
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
 				</div>
 			</div>
 		</footer>
+		<script>
+			const hamburgerBtn = document.getElementById("hamburgerBtn");
+			const navMenu = document.getElementById("navMenu");
+
+			hamburgerBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("show-menu");
+			});
+		</script>
 	</body>
 </html>

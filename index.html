@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="icon" href="./assets/coffee_logo.jpg" type="image/jpeg" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -22,10 +23,18 @@
 	<body>
 		<header class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
-				<div class="header__nav--brand">CofFEE</div>
+				<div class="header__nav--brand">
+					<img src="./assets/coffee_logo.jpg" alt="Cofffee Logo" />
+				</div>
 
 				<!-- Hamburger Button -->
-				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
+				<button
+					class="hamburger"
+					id="hamburgerBtn"
+					aria-label="Toggle navigation"
+				>
+					&#9776;
+				</button>
 
 				<!-- Nav Menu -->
 				<div class="header__nav--section" id="navMenu">
@@ -47,7 +56,7 @@
 			<div class="hero__overlay">
 				<div class="hero__content">
 					<h3>Welcome!</h3>
-					<h1>We serve the richest coffee<br />in the city</h1>
+					<p>We serve the richest coffee<br />in the city</p>
 					<button class="btn">Order Now</button>
 				</div>
 			</div>
@@ -59,7 +68,7 @@
 				<div class="coffee-card">
 					<img
 						src="./assets/feature/feature_coffee_1.jpg"
-						alt="Espresso"
+						alt="Classic Espresso coffee"
 					/>
 					<h3>Classic Espresso</h3>
 					<p>Rich, bold, and perfect for a quick energy boost.</p>
@@ -68,7 +77,7 @@
 				<div class="coffee-card">
 					<img
 						src="./assets/feature/feature_coffee_2.jpg"
-						alt="Latte"
+						alt="Vanilla Latte coffee"
 					/>
 					<h3>Vanilla Latte</h3>
 					<p>Smooth and creamy with a hint of vanilla sweetness.</p>
@@ -77,7 +86,7 @@
 				<div class="coffee-card">
 					<img
 						src="./assets/feature/feature_coffee_3.jpg"
-						alt="Cold Brew"
+						alt="Cold Brew coffee"
 					/>
 					<h3>Cold Brew</h3>
 					<p>
@@ -89,8 +98,6 @@
 		</section>
 
 		<footer class="section__footer">
-			<h1>CofFEE</h1>
-
 			<div class="section__footer--column">
 				<h2>Company</h2>
 				<h3><a href="#">About Us</a></h3>
@@ -122,16 +129,28 @@
 			<div class="section__footer--column">
 				<h2>Follow Us</h2>
 				<div class="section__footer--column-social-media">
-					<a href="https://twitter.com" target="_blank"
+					<a
+						href="https://twitter.com"
+						target="_blank"
+						aria-label="Twitter"
 						><i class="fa-brands fa-twitter"></i
 					></a>
-					<a href="https://facebook.com" target="_blank"
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						aria-label="Facebook"
 						><i class="fa-brands fa-facebook"></i
 					></a>
-					<a href="https://instagram.com" target="_blank"
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						aria-label="Instagram"
 						><i class="fa-brands fa-instagram"></i
 					></a>
-					<a href="https://linkedin.com" target="_blank"
+					<a
+						href="https://linkedin.com"
+						target="_blank"
+						aria-label="LinkedIn"
 						><i class="fa-brands fa-linkedin"></i
 					></a>
 				</div>

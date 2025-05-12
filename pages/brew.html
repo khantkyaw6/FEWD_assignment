@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="../style.css" />
-		<!-- <link rel="stylesheet" href="../styles/brew_style.css" /> -->
+		<link rel="icon" href="../assets/coffee_logo.jpg" type="image/jpeg" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,33 +18,39 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	</head>
 	<body>
 		<header class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
-				<div class="header__nav--brand">CofFEE</div>
-
-				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
-
+				<div class="header__nav--brand">
+					<img src="../assets/coffee_logo.jpg" alt="Cofffee Logo" />
+				</div>
+				<button
+					class="hamburger"
+					id="hamburgerBtn"
+					aria-label="Toggle Navigation"
+				>
+					&#9776;
+				</button>
 				<div class="header__nav--section" id="navMenu">
 					<ul>
-						<li><a href="../index.html">HOME</a></li>
-						<li><a href="../pages/coffee.html">COFFEE</a></li>
-						<li><a href="#">HOW TO BREW</a></li>
-						<li><a href="../pages/cart.html">SHOP</a></li>
-						<li><a href="../pages/event.html">EVENTS</a></li>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../pages/coffee.html">Coffee</a></li>
+						<li><a href="#">How to Brew</a></li>
+						<li><a href="../pages/cart.html">Shop</a></li>
+						<li><a href="../pages/event.html">Events</a></li>
 						<li>
 							<a href="../pages/subscription.html"
-								>SUBSCRIPTION</a
+								>Subscription</a
 							>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
+
 		<div class="section__brew">
 			<h2>Brewing Equipment</h2>
 			<div class="brew__grid">
@@ -54,8 +61,8 @@
 					/>
 					<h3>French Press</h3>
 					<p>
-						Perfect for a rich and bold cup. Add coarse grounds,
-						pour hot water, steep for 4 mins, and press!
+						Perfect for a rich, bold cup. Add coarse grounds, pour
+						hot water, steep for 4 minutes, then press.
 					</p>
 				</div>
 				<div class="brew__item">
@@ -65,8 +72,8 @@
 					/>
 					<h3>Espresso Machine</h3>
 					<p>
-						Make professional espresso at home. Tamp your grounds
-						well and extract under pressure for crema-rich shots.
+						Make café-quality espresso at home. Tamp grounds firmly
+						and extract under pressure for crema-rich shots.
 					</p>
 				</div>
 				<div class="brew__item">
@@ -76,8 +83,8 @@
 					/>
 					<h3>Pour Over</h3>
 					<p>
-						For clarity and flavor. Use a gooseneck kettle and bloom
-						the grounds before continuing the pour.
+						Enjoy clean and bright flavors. Use a gooseneck kettle
+						and bloom grounds before pouring gradually.
 					</p>
 				</div>
 				<div class="brew__item">
@@ -87,16 +94,14 @@
 					/>
 					<h3>AeroPress</h3>
 					<p>
-						Great for travel. Combine fine coffee and water, stir,
-						and press in under two minutes for a clean cup.
+						Ideal for travel. Mix fine coffee and water, stir, and
+						press in under two minutes for a smooth cup.
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<footer class="section__footer">
-			<h1>CofFEE</h1>
-
 			<div class="section__footer--column">
 				<h2>Company</h2>
 				<h3><a href="#">About Us</a></h3>
@@ -128,20 +133,40 @@
 			<div class="section__footer--column">
 				<h2>Follow Us</h2>
 				<div class="section__footer--column-social-media">
-					<a href="https://twitter.com" target="_blank"
+					<a
+						href="https://twitter.com"
+						target="_blank"
+						aria-label="Twitter"
 						><i class="fa-brands fa-twitter"></i
 					></a>
-					<a href="https://facebook.com" target="_blank"
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						aria-label="Facebook"
 						><i class="fa-brands fa-facebook"></i
 					></a>
-					<a href="https://instagram.com" target="_blank"
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						aria-label="Instagram"
 						><i class="fa-brands fa-instagram"></i
 					></a>
-					<a href="https://linkedin.com" target="_blank"
+					<a
+						href="https://linkedin.com"
+						target="_blank"
+						aria-label="LinkedIn"
 						><i class="fa-brands fa-linkedin"></i
 					></a>
 				</div>
 			</div>
 		</footer>
+		<script>
+			const hamburgerBtn = document.getElementById("hamburgerBtn");
+			const navMenu = document.getElementById("navMenu");
+
+			hamburgerBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("show-menu");
+			});
+		</script>
 	</body>
 </html>

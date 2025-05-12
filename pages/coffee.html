@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CofFEE</title>
 		<link rel="stylesheet" href="../style.css" />
-		<!-- <link rel="stylesheet" href="../styles/coffee_style.css" /> -->
+		<link rel="icon" href="../assets/coffee_logo.jpg" type="image/jpeg" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,7 +17,6 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 		<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
@@ -31,7 +30,6 @@
 				const cards = document.querySelectorAll(
 					".section__special--card"
 				);
-
 				cards.forEach((card) => {
 					const title = card
 						.querySelector("h3")
@@ -46,10 +44,10 @@
 	<body>
 		<header class="header">
 			<nav class="header__nav section__nav--font header__nav--background">
-				<div class="header__nav--brand">CofFEE</div>
-
+				<div class="header__nav--brand">
+					<img src="../assets/coffee_logo.jpg" alt="Cofffee Logo" />
+				</div>
 				<button class="hamburger" id="hamburgerBtn">&#9776;</button>
-
 				<div class="header__nav--section" id="navMenu">
 					<ul>
 						<li><a href="../index.html">HOME</a></li>
@@ -66,283 +64,244 @@
 				</div>
 			</nav>
 		</header>
-		<section class="section__coffee">
-			<h1>Try Coffee Everyday!</h1>
-			<div class="section__coffee--content">
-				<iframe
-					width="760"
-					height="600"
-					src="https://www.youtube.com/embed/Yv5qyD9OMeU?si=gM2iGt_dRvGyKwEw"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				></iframe>
-				<div class="section__coffee--image">
-					<div>
-						<img
-							src="../assets/cart/coffee_page_1.jpg"
-							alt="Coffee cup 1"
+
+		<main>
+			<section class="section__coffee">
+				<h2>Try Coffee Everyday!</h2>
+				<div class="section__coffee--content">
+					<iframe
+						width="760"
+						height="500"
+						src="https://www.youtube.com/embed/Yv5qyD9OMeU?si=gM2iGt_dRvGyKwEw"
+						title="YouTube video player"
+						style="border: none"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+					<div class="section__coffee--image">
+						<div>
+							<img
+								src="../assets/cart/coffee_page_1.jpg"
+								alt="Coffee cup 1"
+							/>
+							<p>Flavoured Creamy Coffee</p>
+						</div>
+						<div>
+							<img
+								src="../assets/cart/coffee_page_2.jpg"
+								alt="Coffee cup 2"
+							/>
+							<p>Creamy Dream Coffee</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section__special">
+				<div class="section__special--catelogue section__margin">
+					<h2>Coffee Catalogue</h2>
+					<div class="search-box">
+						<input
+							type="text"
+							id="searchInput"
+							placeholder="Search..."
+							aria-label="Search coffee catalogue"
 						/>
-						<p>Flavoured Creamy Coffee</p>
-					</div>
-					<div>
-						<img
-							src="../assets/cart/coffee_page_2.jpg"
-							alt="Coffee cup 2"
-						/>
-						<p>Creamy Dream Coffee</p>
+						<button onclick="handleSearch()">🔍</button>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="section__special">
-			<div class="section__special--catelogue section__margin">
-				<h1>coffee catalogue</h1>
-				<div class="search-box">
-					<input
-						type="text"
-						id="searchInput"
-						placeholder="Search..."
-						aria-label="Search coffee catalogue"
-					/>
-					<button onclick="handleSearch()">🔍</button>
-				</div>
-			</div>
-		</section>
-		<section class="section__slider">
-			<div class="embla">
-				<div class="embla__container">
-					<!-- Card 1 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_1.jpg"
-								alt="Espresso Shot"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Espresso Shot</h3>
-							<p>
-								A bold and intense single shot of espresso,
-								perfect for a quick energy boost and strong with
-								deep flavor.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 40</strong>
-								<button>Order Now</button>
+			</section>
+
+			<section class="section__slider">
+				<div class="embla">
+					<div class="embla__container">
+						<!-- Card 1  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_1.jpg"
+									alt="Espresso Shot"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Espresso Shot</h3>
+								<p>
+									A bold and intense single shot of espresso,
+									perfect for a quick energy boost and strong
+									with deep flavor.
+								</p>
+								<div class="section__special--card--footer">
+									<strong>Rs. 40</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<!-- Card 2 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_2.jpg"
-								alt="Cappuccino Classic"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Cappuccino Classic</h3>
-							<p>
-								A rich espresso base layered with velvety
-								steamed milk and a fluffy cap of foam, dusted
-								with cocoa.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 55</strong>
-								<button>Order Now</button>
+						<!-- Card 2  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_2.jpg"
+									alt="Espresso Shot"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Vanilla Latte</h3>
+								<p>
+									Smooth and creamy coffee infused with the
+									sweet aroma of vanilla perfect balance of
+									espresso and steamed milk
+								</p>
+								<div class="section__special--card--footer">
+									<strong>Rs. 60</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<!-- Card 3 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_3.jpg"
-								alt="Cold Brew Marble"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Cold Brew Marble</h3>
-							<p>
-								A refreshing cold brew with a beautiful swirl of
-								milk and ice, bold on flavor and smooth in
-								texture.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 66</strong>
-								<button>Order Now</button>
+						<!-- Card 3  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_3.jpg"
+									alt="Caramel Macchiato"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Caramel Macchiato</h3>
+								<p>
+									Rich espresso layered with steamed milk and
+									a generous caramel drizzle for a sweet and
+									treat with creamy texture
+								</p>
+								<div class="section__special--card--footer">
+									<strong>Rs. 70</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<!-- Card 4 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_4.jpg"
-								alt="Iced Milky Rush"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Iced Milky Rush</h3>
-							<p>
-								A chilled delight blending rich espresso with
-								sweetened milk for a creamy and energizing drink
-								for everybody.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 48</strong>
-								<button>Order Now</button>
+						<!-- Card 4  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_4.jpg"
+									alt="Cappuccino"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Cappuccino</h3>
+								<p>
+									A classic Italian coffee drink made with
+									equal parts espresso, steamed milk, and
+									rich, airy foam balanced flavor
+								</p>
+								<div class="section__special--card--footer">
+									<strong>Rs. 50</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<!-- Card 5 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_5.jpg"
-								alt="Mocha Bliss"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Mocha Bliss</h3>
-							<p>
-								A decadent fusion of espresso and rich
-								chocolate, topped with whipped cream for a sweet
-								finish.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 60</strong>
-								<button>Order Now</button>
+						<!-- Card 5  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_5.jpg"
+									alt="Iced Mocha"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Iced Mocha</h3>
+								<p>
+									Chilled coffee blended with rich chocolate
+									syrup and creamy milk, served over ice for a
+									refreshing and indulgent treat
+								</p>
+								<div class="section__special--card--footer">
+									<strong>Rs. 50</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
+						<!-- Card 6  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_6.jpg"
+									alt="Cold Brew"
+								/>
+							</div>
+							<div class="section__special--card--content">
+								<h3>Cold Brew</h3>
+								<p>
+									Slow-steeped coffee served cold with a
+									smooth and refreshing flavor.
+								</p>
 
-					<!-- Card 6 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_6.jpg"
-								alt="Caramel Macchiato"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Caramel Macchiato</h3>
-							<p>
-								Layers of rich espresso, velvety steamed milk,
-								and golden caramel drizzle come together in this
-								café favorite
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 62</strong>
-								<button>Order Now</button>
+								<div class="section__special--card--footer">
+									<strong>Rs. 50</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<!-- Card 7 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_7.jpg"
-								alt="Vanilla Cold Foam"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Vanilla Cold Foam</h3>
-							<p>
-								Cold brew topped with silky vanilla cold foam,
-								offering a smooth and mellow coffee experience.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 64</strong>
-								<button>Order Now</button>
+						<!-- Card 7  -->
+						<div class="section__special--card embla__slide">
+							<div class="section__special--card--image">
+								<img
+									src="../assets/card/coffee_card_7.jpg"
+									alt="Affogato"
+								/>
 							</div>
-						</div>
-					</div>
+							<div class="section__special--card--content">
+								<h3>Affogato</h3>
+								<p>
+									A scoop of vanilla ice cream drowned in hot
+									espresso for a bold and creamy combo.
+								</p>
 
-					<!-- Card 8 -->
-					<div class="section__special--card embla__slide">
-						<div class="section__special--card--image">
-							<img
-								src="../assets/card/coffee_card_8.jpg"
-								alt="Hazelnut Cream Latte"
-							/>
-						</div>
-						<div class="section__special--card--content">
-							<h3>Hazelnut Cream Latte</h3>
-							<p>
-								A smooth latte infused with toasted hazelnut
-								syrup and topped with cream for a nutty, cozy
-								sip.
-							</p>
-							<div class="section__special--card--footer">
-								<strong>Rs. 65</strong>
-								<button>Order Now</button>
+								<div class="section__special--card--footer">
+									<strong>Rs. 50</strong>
+									<button>Order Now</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
 		<footer class="section__footer">
-			<h1>CofFEE</h1>
-
 			<div class="section__footer--column">
 				<h2>Company</h2>
 				<h3><a href="#">About Us</a></h3>
-				<h3><a href="#">Careers</a></h3>
 				<h3><a href="#">Contact</a></h3>
+				<h3><a href="#">Terms</a></h3>
 			</div>
-
 			<div class="section__footer--column">
 				<h2>Support</h2>
-				<h3><a href="#">FAQs</a></h3>
-				<h3><a href="#">Shipping & Returns</a></h3>
-				<h3><a href="#">Order Status</a></h3>
+				<h3><a href="#">FAQ</a></h3>
+				<h3><a href="#">Shipping</a></h3>
+				<h3><a href="#">Returns</a></h3>
 			</div>
-
-			<div class="section__footer--column">
-				<h2>Legal</h2>
-				<h3><a href="#">Terms of Use</a></h3>
-				<h3><a href="#">Privacy Policy</a></h3>
-				<h3><a href="#">Cookie Policy</a></h3>
-			</div>
-
-			<div class="section__footer--column">
-				<h2>Discover</h2>
-				<h3><a href="#">Our Coffee</a></h3>
-				<h3><a href="#">How to Brew</a></h3>
-				<h3><a href="#">Events & Workshops</a></h3>
-			</div>
-
 			<div class="section__footer--column">
 				<h2>Follow Us</h2>
-				<div class="section__footer--column-social-media">
-					<a href="https://twitter.com" target="_blank"
-						><i class="fa-brands fa-twitter"></i
-					></a>
-					<a href="https://facebook.com" target="_blank"
-						><i class="fa-brands fa-facebook"></i
-					></a>
-					<a href="https://instagram.com" target="_blank"
-						><i class="fa-brands fa-instagram"></i
-					></a>
-					<a href="https://linkedin.com" target="_blank"
-						><i class="fa-brands fa-linkedin"></i
-					></a>
-				</div>
+				<h3>
+					<a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+				</h3>
+				<h3>
+					<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+				</h3>
+				<h3>
+					<a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+				</h3>
 			</div>
 		</footer>
+		<script>
+			const hamburgerBtn = document.getElementById("hamburgerBtn");
+			const navMenu = document.getElementById("navMenu");
 
-		<script type="text/javascript">
+			hamburgerBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("show-menu");
+			});
+
 			const emblaNode = document.querySelector(".embla");
 			const options = { loop: false };
 			const plugins = [EmblaCarouselAutoplay()];
